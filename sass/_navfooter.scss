@@ -80,7 +80,7 @@ footer {
        @include m.flexrow; 
        align-items: center;
        li {
-        padding: .8rem;
+        padding: .6rem .8rem;
         border: 2px solid #fff;
         border-radius: 50%;
         @extend %transition;
