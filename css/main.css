@@ -1,0 +1,631 @@
+/* Color Palette */
+/* Mixins */
+/* Responsive Mixins */
+/* Extends */
+.introduction .p1, .introduction .p2, .process .pi2, .projects, .nav .navbar, footer div, .formtitle, .form, section[class=first], .secondContainer .second, .thirdContainer .third, .references {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.nav .page1 a, .form button {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  max-width: max-content;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 2px;
+}
+.nav .page1 a:hover, .form button:hover {
+  background-color: hsl(9, 73%, 61%);
+}
+
+.process .pi2 div div, .nav .navbar .right li a, footer div ul li {
+  transition: all 0.5s ease;
+}
+
+.secondContainer .second > div .gray1, .secondContainer .second > div .gray2, .secondContainer .second > div .gray3 {
+  position: absolute;
+  top: 48%;
+  height: 2rem;
+  background-color: hsl(0, 0%, 88%);
+  opacity: 1;
+  border-radius: 1px 0 0 1px;
+}
+
+.introduction .p2 h2, .process .pi2 div h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.introduction .p2 p, .process .pi2 div p {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .introduction .p1, .introduction .p2, .process .pi2, .projects, .nav .navbar, footer div, .formtitle, .form, section[class=first], .secondContainer .second, .thirdContainer .third, .references {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .introduction .p1, .introduction .p2, .process .pi2, .projects, .nav .navbar, footer div, .formtitle, .form, section[class=first], .secondContainer .second, .thirdContainer .third, .references {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+.nav {
+  border-bottom: 0.3rem hsl(9, 73%, 61%) solid;
+}
+
+.container .title {
+  text-align: center;
+  margin: 3rem 0;
+}
+.container .title h1 {
+  font-size: 2.6rem;
+  padding: 1rem 0;
+}
+.container .title .borderline {
+  width: 4rem;
+  border-bottom: 2px hsl(9, 73%, 61%) solid;
+  margin: 0 auto 1rem;
+}
+.container .title p {
+  font-size: 1.7rem;
+}
+
+section[class=first] .first2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  place-items: center;
+  margin: 4rem 0;
+}
+section[class=first] .first2 div:first-child {
+  padding: 1rem;
+  border: 1px solid hsla(0, 0%, 88%, 0.5);
+  height: 100%;
+  width: 100%;
+}
+section[class=first] .first2 div:last-child {
+  border: 1px solid hsla(0, 0%, 88%, 0.5);
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+section[class=first] .first2 div:last-child h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+section[class=first] .first2 div:last-child p {
+  font-size: 1.5rem;
+}
+
+.secondContainer {
+  background-color: hsl(300, 3%, 6%);
+  padding: 2.5rem 0 6rem;
+}
+.secondContainer .second {
+  text-align: start;
+  padding: 1rem 3rem;
+  color: hsl(0, 0%, 100%);
+}
+.secondContainer .second > div {
+  margin: 1rem 0;
+  position: relative;
+}
+.secondContainer .second > div .gray1 {
+  left: 90%;
+  width: 10%;
+}
+.secondContainer .second > div .gray2 {
+  left: 75%;
+  width: 25%;
+}
+.secondContainer .second > div .gray3 {
+  left: 80%;
+  width: 20%;
+}
+.secondContainer .second div:not(:first-child) div:nth-child(2) {
+  background-color: hsl(9, 73%, 61%);
+  height: 2rem;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 88%);
+}
+
+.thirdContainer {
+  background-color: hsl(0, 0%, 88%);
+}
+.thirdContainer .third {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 6rem;
+  align-items: center;
+  height: auto;
+  gap: 6rem;
+  margin: auto;
+}
+
+.references {
+  margin-top: 5rem;
+}
+.references .ref1 {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  section[class=first] .first2 {
+    grid-template-columns: auto;
+  }
+  .thirdContainer .third {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+.nav {
+  border-bottom: 0.3rem hsl(9, 73%, 61%) solid;
+}
+
+.formtitle {
+  margin-top: 6rem;
+}
+.formtitle h1 {
+  font-size: 2.6rem;
+  padding: 1rem 0;
+}
+.formtitle .borderline {
+  width: 4rem;
+  border-bottom: 2px hsl(9, 73%, 61%) solid;
+  margin: 0 auto 1rem;
+}
+.formtitle p {
+  font-size: 1.7rem;
+}
+.formtitle .borderline {
+  padding: 1rem;
+}
+
+.form {
+  margin-top: 5rem;
+}
+.form .formField {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.form .formField input {
+  border: 1px solid hsl(0, 0%, 68%);
+  padding: 1rem 0.4rem;
+  width: 100%;
+}
+.form .formField input:focus {
+  border: none;
+  outline: 2px solid hsl(9, 73%, 61%);
+}
+.form textarea {
+  border: 1px solid hsl(0, 0%, 68%);
+  padding: 1rem 0.4rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+.form textarea:focus {
+  border: none;
+  outline: 2px solid hsl(9, 73%, 61%);
+}
+.form button {
+  margin-top: 1rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(300, 3%, 6%);
+  max-width: 100%;
+  width: 100%;
+}
+
+.beforefooter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  background-color: hsl(9, 73%, 61%);
+  color: hsl(0, 0%, 100%);
+  padding: 5rem;
+  margin-top: 2rem;
+}
+.beforefooter div {
+  text-align: center;
+}
+.beforefooter div h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.beforefooter div p {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1081px) {
+  .form textarea {
+    height: 40vh;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .form .formField {
+    grid-template-columns: 1fr;
+  }
+  .beforefooter {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+.selected {
+  border-bottom: 3px hsl(9, 73%, 61%) solid;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner.jpg) no-repeat center/cover;
+  height: 100vh;
+  position: relative;
+}
+.nav .navbar {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.nav .navbar .left li {
+  width: 6rem;
+  height: 6rem;
+}
+.nav .navbar input[type=checkbox] {
+  display: none;
+}
+.nav .navbar .right {
+  display: flex;
+  gap: 3rem;
+}
+.nav .navbar .right li a {
+  padding: 0.7rem 0;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+}
+.nav .navbar .right li a:not([class=selected]) {
+  border-bottom: 3px transparent solid;
+}
+.nav .navbar .right li a:hover {
+  border-bottom: 3px hsl(0, 0%, 68%) solid;
+}
+.nav .page1 {
+  margin-top: -6rem;
+  flex-grow: 1;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.nav .page1 h1 {
+  font-size: 5rem;
+  padding: 1rem;
+}
+.nav .page1 h1 .typewrite {
+  display: block;
+}
+.nav .page1 a {
+  align-self: center;
+}
+
+footer {
+  background-color: hsl(300, 3%, 6%);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+footer div {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+footer div ul li {
+  padding: 0.8rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+footer div ul li:hover {
+  background-color: hsl(9, 73%, 61%);
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar label[for=checkbox] {
+    cursor: pointer;
+  }
+  .navbar label[for=checkbox] .hamburger div {
+    width: 2.8rem;
+    height: 0.3rem;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0.5rem 0;
+    z-index: 10;
+    transition: all 0.5s ease-in;
+  }
+  .navbar .right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+    background-color: hsla(0, 0%, 0%, 0.9);
+  }
+  .navbar .right.ham {
+    display: none;
+  }
+  .navbar #checkbox:checked ~ .right.ham {
+    display: flex;
+  }
+  .navbar #checkbox:checked ~ label .hamburger .top {
+    position: relative;
+    height: 0.4rem;
+    top: 0.85rem;
+    transform: rotate(-45deg);
+  }
+  .navbar #checkbox:checked ~ label .hamburger .mid {
+    opacity: 0;
+  }
+  .navbar #checkbox:checked ~ label .hamburger .bottom {
+    position: relative;
+    height: 0.4rem;
+    top: -0.85rem;
+    transform: rotate(45deg);
+  }
+  footer {
+    padding-bottom: 2rem;
+  }
+  footer div {
+    flex-direction: column;
+  }
+}
+.nav {
+  border-bottom: 0.3rem hsl(9, 73%, 61%) solid;
+}
+
+.projects {
+  text-align: center;
+  margin: 4rem auto;
+}
+.projects h1 {
+  font-size: 2.6rem;
+  padding: 1rem 0;
+}
+.projects .borderline {
+  width: 4rem;
+  border-bottom: 2px hsl(9, 73%, 61%) solid;
+  margin: 0 auto 1rem;
+}
+.projects p {
+  font-size: 1.7rem;
+}
+.projects .projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+  padding-bottom: 5rem;
+}
+.projects .projectsGrid > div {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 88%);
+  height: 100%;
+  padding-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects .projectsGrid > div:hover .curtain {
+  animation: curtain 1s forwards ease;
+}
+.projects .projectsGrid > div .curtain {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(9, 73%, 61%, 0.6);
+  position: absolute;
+  top: -30%;
+  left: -120%;
+  transform: skew(-47deg);
+}
+@keyframes curtain {
+  50% {
+    left: -57%;
+  }
+  100% {
+    left: -75%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1081px) {
+  .projects .projectsGrid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .projects .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Reset CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+*::selection {
+  background-color: hsl(9, 73%, 61%);
+  color: hsl(0, 0%, 100%);
+}
+
+.introduction {
+  padding-top: 2rem;
+}
+.introduction .p1 {
+  margin-bottom: 5rem;
+}
+.introduction .p1 h1 {
+  font-size: 2.6rem;
+  padding: 1rem 0;
+}
+.introduction .p1 .borderline {
+  width: 4rem;
+  border-bottom: 2px hsl(9, 73%, 61%) solid;
+  margin: 0 auto 1rem;
+}
+.introduction .p1 p {
+  font-size: 1.7rem;
+}
+.introduction .p2 {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+.introduction .p2 i {
+  color: hsl(9, 73%, 61%);
+}
+
+.profile ul {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+.profile ul li:nth-child(odd) {
+  padding: 5rem 0;
+  background-color: hsl(0, 0%, 88%);
+}
+.profile ul li:nth-child(even) {
+  padding: 5rem 0;
+  background-color: hsl(0, 0%, 68%);
+}
+.profile ul h2 {
+  font-size: 2rem;
+}
+.profile ul p {
+  font-size: 2rem;
+}
+
+.process {
+  margin-bottom: 10rem;
+}
+.process .pi2 {
+  display: flex;
+  gap: 4rem;
+}
+.process .pi2 div div {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 8rem;
+  height: 8rem;
+  background-color: hsl(300, 3%, 6%);
+  border-radius: 50%;
+  margin: 7rem auto 2rem;
+}
+.process .pi2 div div i {
+  color: hsl(0, 0%, 100%);
+}
+.process .pi2 div div .numbers {
+  position: absolute;
+  background-color: hsl(9, 73%, 61%);
+  color: hsl(0, 0%, 100%);
+  width: 3rem;
+  height: 3rem;
+  left: 5.6rem;
+  top: -7rem;
+}
+.process .pi2 div div .numbers p {
+  font-size: 1.7rem;
+}
+.process .pi2 div div:hover {
+  background-color: hsl(9, 73%, 61%);
+}
+.process .pi2 div div:hover .numbers {
+  background-color: hsl(300, 3%, 6%);
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .introduction .p2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+  .process .pi2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 8rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .home .right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+    background-color: transparent !important;
+  }
+  .introduction .p2 {
+    flex-direction: column;
+  }
+  .profile ul {
+    grid-template-columns: 1fr;
+  }
+  .process .pi2 {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

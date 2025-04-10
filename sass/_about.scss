@@ -1,0 +1,127 @@
+@use 'mixins' as m;
+
+
+.container {
+    .title {
+        @include m.title;
+        text-align: center;
+        margin: 3rem 0;
+    }
+}
+section[class='first'] {
+    @extend %pageWidth;
+    .first2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem;
+        place-items: center;
+        margin: 4rem 0;
+        div:first-child {
+            padding: 1rem;
+            border: 1px solid hsla(0, 0%, 88%, 0.5);
+            height: 100%;
+            width: 100%;
+        }
+        div:last-child {
+            border: 1px solid hsla(0, 0%, 88%, 0.5);
+            padding: 2rem;
+            height: 100%;
+            width: 100%;
+            h3 {
+                font-size: 2rem;
+                padding-bottom: 1rem;
+            }
+            p {
+                font-size: 1.5rem;
+            } 
+        }
+    }
+}
+.secondContainer {
+    background-color: m.$logoBlack;
+    padding: 2.5rem 0 6rem;
+    .second {
+        @extend %pageWidth;
+        text-align: start;
+        padding: 1rem 3rem;
+        color: m.$pageColor;
+        >div {
+            margin: 1rem 0;
+            position: relative;
+            .gray1 {
+                @extend %gray;
+                left: 90%;
+                width: 10%;
+            }
+            .gray2 {
+                @extend %gray;
+                left: 75%;
+                width: 25%;
+            }
+            .gray3 {
+                @extend %gray;
+                left: 80%;
+                width: 20%;
+            }
+        }
+        div:not(:first-child) {
+            div:nth-child(2) {
+                background-color: m.$themeColor;
+                height: 2rem;
+                width: 100%;
+                border: 1px solid m.$lightGray;
+            }
+        }
+    }
+}
+.thirdContainer {
+    background-color: m.$lightGray;
+    .third {
+        @extend %pageWidth;
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        padding: 2rem 6rem;
+        align-items: center;
+        height: auto;
+        gap: 6rem;
+        margin: auto;
+    }
+}
+.references {
+    margin-top: 5rem;
+    @extend %pageWidth;
+    .ref1 {
+        margin-bottom: 3rem;
+    }
+    .comments {
+       div {
+        p {
+            border: 1px solid m.$lightGray;
+            border-radius: 2px;
+            padding: 1rem;
+        }
+        ul {
+            @include m.flexrow;
+            align-items: center;
+            margin-top: 1.5rem;
+            img {
+                width: 6rem;
+                height: 7rem;
+                border-radius: 50%;
+            }
+        }
+       }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    section[class="first"] {
+        .first2 {
+            grid-template-columns: auto;
+        }
+    }
+    .thirdContainer {
+        .third {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@use 'mixins' as m;
+
+.formtitle {
+    margin-top: 6rem;
+    @extend %pageWidth;
+    @include m.title;
+    .borderline {
+        padding: 1rem;
+    }
+}
+.form {
+    @extend %pageWidth;
+    margin-top: 5rem;
+    .formField {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        input {
+            @include m.forminput;
+        }
+    }
+    textarea {
+        @include m.forminput;
+        margin: 1.5rem 0;
+        width: 100%;        
+        height: 100%;
+        resize: none;
+    }
+    button {
+        margin-top: 1rem;
+        @extend %btn;
+        color: m.$pageColor;
+        background-color: m.$logoBlack;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.beforefooter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    background-color: m.$themeColor;
+    color: m.$pageColor;
+    padding: 5rem;
+    margin-top: 2rem;
+    div{
+        text-align: center;
+        h3 {
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1081px) {
+    .form textarea {
+        height: 40vh;
+    }
+}
+@media screen and (min-width: 300px ) and (max-width: 768px) {
+    .form {
+        .formField {
+            grid-template-columns: 1fr;
+        }
+    }
+    .beforefooter {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

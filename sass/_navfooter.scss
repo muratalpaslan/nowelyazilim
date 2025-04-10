@@ -1,0 +1,147 @@
+@use 'mixins' as m;
+
+body:not([class="home"]) {
+    .nav {
+        border-bottom: .3rem m.$themeColor solid;
+    }
+}
+.selected {
+    border-bottom: 3px m.$themeColor solid ;
+}
+.nav {
+    @include m.flexcol;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner.webp) no-repeat center/cover;
+    height: 100vh;
+    position:relative;
+    .navbar {
+        @extend %pageWidth;
+        @include m.flexrow;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        .left {
+            li {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        input[type='checkbox'] {
+            display: none;
+        }
+        .right {
+            @include m.flexrow;
+            li {
+                a { 
+                    padding: .7rem 0;
+                    color: m.$pageColor;
+                    font-size: 1.25rem;
+                    @extend %transition;
+                    &:not([class='selected']) {
+                        border-bottom: 3px transparent solid ;
+                }
+                    &:hover {
+                        border-bottom: 3px m.$darkGray solid;
+                    }
+                }
+            }
+        }
+    }
+    .page1 {
+        margin-top: -6rem;
+        flex-grow: 1;
+        color: m.$pageColor;
+        @include m.flexcol;
+        justify-content: center;
+        text-align: center;
+        h1 {
+            font-size: 5rem;
+            padding: 1rem;
+            .typewrite {
+                display: block;
+            }
+        }   
+        a {
+            @extend %btn;
+            align-self: center;
+        }        
+    }
+}
+footer {
+    background-color: m.$logoBlack;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+   div{
+    color: m.$pageColor;
+    @extend %pageWidth;
+    @include m.flexrow;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+       @include m.flexrow; 
+       align-items: center;
+       li {
+        padding: .8rem;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        @extend %transition;
+        &:hover {
+            background-color: m.$themeColor;
+        }
+       }
+    }
+   }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .navbar {
+        position: relative;
+        label[for='checkbox'] {
+            cursor: pointer;
+            .hamburger {
+                div {
+                    width: 2.8rem;
+                    height: .3rem;
+                    background-color: m.$pageColor;
+                    margin: .5rem 0;
+                    z-index: 10;
+                    transition: all .5s ease-in;
+                }
+            }
+        }
+        .right {
+            @include m.flexcol;
+            @include m.rightNav;
+        }
+        .right.ham {
+            display: none;
+        }
+        #checkbox:checked ~ .right.ham {
+            display: flex;
+        }
+        #checkbox:checked ~ label .hamburger  {
+            .top {
+                position: relative;
+                height: .4rem;
+                top: .85rem;
+                transform: rotate(-45deg);
+            }
+            .mid {
+                opacity: 0;
+            }
+            .bottom {
+                position: relative;
+                height: .4rem;
+                top: -.85rem;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    footer {
+        padding-bottom: 2rem;
+        div {
+            flex-direction: column;
+        }
+    }
+}
+
+            

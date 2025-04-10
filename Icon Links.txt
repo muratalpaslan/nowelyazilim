@@ -1,0 +1,27 @@
+LOGO: 
+
+<i class="fa-solid fa-window-minimize"></i> UNDERLINE FOR HEAD SENTENCES
+
+Main Page 4 Orange Icons (Introduction):
+<i class="fa-solid fa-code-fork"></i> JAVASCRIPT
+<i class="fa-solid fa-laptop-code"></i> ASP.Net
+<i class="fa-solid fa-bug"></i> PYTHON
+<i class="fa-solid fa-code"></i> DATABASE
+
+
+MainPage 4 Icons Backgrounds Gray ( Profile):
+<i class="fa-solid fa-users"></i> Users
+<i class="fa-solid fa-medal"></i> Projects
+<i class="fa-solid fa-hourglass-start"></i> Hours
+<i class="fa-solid fa-code-branch"></i> Project Completed
+
+Working Process
+<i class="fa-solid fa-layer-group"></i> Step 1
+<i class="fa-solid fa-eye"></i> Step 2
+<i class="fa-solid fa-object-ungroup"></i> Step3
+<i class="fa-solid fa-file-lines"></i> Step 4
+
+Contact Page 
+<i class="fa-solid fa-envelope"></i> MAIL
+<i class="fa-solid fa-phone"></i> PHONE
+<i class="fa-solid fa-address-card"></i> ADRESS

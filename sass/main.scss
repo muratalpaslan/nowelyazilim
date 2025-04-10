@@ -1,0 +1,121 @@
+@use 'mixins' as m;
+@use 'about';
+@use 'contact';
+@use 'navfooter';
+@use 'projects';
+@use 'reset';
+
+.introduction {
+    padding-top: 2rem;
+    .p1 {
+        @extend %pageWidth;
+        @include m.title;
+        margin-bottom: 5rem;
+    }
+    .p2 {
+        @extend %pageWidth;
+        @include m.flexrow(2rem);
+        padding: 4rem 0;
+        @extend %h2p1;
+        i{
+            color: m.$themeColor;
+        }
+    }
+}
+.profile {
+    ul {
+        margin: 4rem 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        text-align: center;
+        li:nth-child(odd){
+            padding: 5rem 0;
+            background-color: m.$lightGray;
+        } 
+        li:nth-child(even){
+            padding: 5rem 0;
+            background-color: m.$darkGray;
+        } 
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+.process {
+    margin-bottom: 10rem;
+    .pi2 {
+        @extend %pageWidth;
+        @include m.flexrow(4rem);
+        div {
+            div {
+                position: relative;
+                display: grid;
+                place-items: center ;
+                width: 8rem;
+                height: 8rem;
+                background-color: m.$logoBlack;
+                border-radius: 50%;
+                margin: 7rem auto 2rem;
+                @extend %transition;
+                i {
+                    color: m.$pageColor;    
+                }
+                .numbers {
+                    position: absolute;
+                    background-color: m.$themeColor;
+                    color: m.$pageColor;
+                    width: 3rem;
+                    height: 3rem;
+                    left: 5.6rem;
+                    top: -7rem;
+                    p {
+                        font-size: 1.7rem;
+                    }
+                }  
+                &:hover {
+                    background-color: m.$themeColor;
+                    .numbers {
+                        background-color: m.$logoBlack;
+                    }
+                }
+            }
+            @extend %h2p1;
+        }
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .introduction {
+
+        .p2 {
+           @include m.gridCol2(5rem 2rem);
+        }
+    }  
+    .process {
+        .pi2 {
+            @include m.gridCol2(0 8rem);
+        }
+    } 
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .home .right {
+        @include m.flexcol;
+        @include m.rightNav (transparent !important);
+    }
+    .introduction {
+        .p2 {
+            flex-direction: column;
+        }
+    }
+    .profile ul {
+        grid-template-columns: 1fr;
+    }
+    .process {
+        .pi2 {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}

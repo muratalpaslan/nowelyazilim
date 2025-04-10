@@ -1,0 +1,117 @@
+/* Color Palette */
+$pageColor: hsl(0, 0%, 100%);
+$textColor: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 68%);
+$lightGray: hsl(0, 0%, 88%);
+$themeColor:hsl(9, 73%, 61%);
+$logoBlue: hsl(189, 38%, 54%);
+$logoBlack: hsl(300, 3%, 6%);
+
+/* Mixins */
+@mixin flexrow ($gap: 3rem) {
+    display: flex;
+    gap: $gap;
+}
+@mixin flexcol {
+    display: flex;
+    flex-direction: column;
+}
+@mixin title($h1: 2.6rem, $line: 2px, $p: 1.7rem) {
+    h1 {
+      font-size: $h1;
+      padding: 1rem 0;
+    }
+    .borderline {
+      width: 4rem;
+      border-bottom: $line $themeColor solid;
+      margin: 0 auto 1rem;
+    }
+    p {
+      font-size: $p;
+    }
+}
+@mixin forminput {
+    border: 1px solid $darkGray;
+    padding: 1rem .4rem;
+    width: 100%;
+    &:focus {
+        border: none;
+        outline: 2px solid $themeColor;
+    }
+}
+@mixin rightNav ($bg: hsla(0, 0%, 0%, .9)) {
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 100%;
+    padding: .5rem 0 1rem;
+    background-color: $bg;
+}
+
+/* Responsive Mixins */
+@mixin gridCol2 ($gap: 2rem 2rem){
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: $gap;
+}
+
+/* Extends */
+%pageWidth {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+}
+%btn {
+    font-size: 1.5rem;
+    padding: .8rem 1.8rem;
+    background-color: $pageColor;
+    color: $textColor;
+    max-width: max-content;
+    display: inline-block;
+    transition: background-color .5s ease;
+    box-shadow: 2px 2px 2px ;
+    &:hover {
+        background-color: $themeColor;
+    }
+}
+%transition {
+    transition: all .5s ease;
+}
+%gray {
+    position: absolute;
+    top: 48%;
+    height: 2rem;
+    background-color: $lightGray;
+    opacity: 1;
+    border-radius: 1px 0 0 1px;
+}
+%h2p1 {
+    h2 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    p {
+        font-size: 1.5rem
+    }
+}
+ 
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    %pageWidth {
+        width: 100%;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    %pageWidth {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+}
