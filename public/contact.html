@@ -44,12 +44,12 @@
                 <p>İçtenliğinizle yazın. Ulaşmak bir tuş kadar yakınınızda. </p>
             </section>
             <form 
-                name ="contact" netlify
+                name ="contact"
                 class="form"
-                method="POST" 
-                data-netlify-recaptcha="true"
-                data-netlify="true"
+                action="https://formspree.io/f/xwpladyb"
+                method="POST"
             >
+            <input type="hidden" name="contact" value="contact">
                 <div class="formField">
                     <div>
                         <input type="text" name="name" id="name" placeholder="Ad Soyad" required>
@@ -64,17 +64,13 @@
                         <label for="subject"></label>
                     </div>   
                     <div>
-                        <input type="tel" name="phone" id="phone" placeholder="Telefon" required>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Telefon Numaranız" required>
                         <label for="phone"></label>
                     </div>
                 </div>
                 <div class="message">
                 <textarea name="message" rows="20" id="message" placeholder="Mesajınızı Yazınız"></textarea>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
-                <p id="captcha-error" style="color: red; display: none; font-weight: bold; margin-top: 10px;">
-                    Lütfen reCAPTCHA kontrolünü tamamlayınız.
-                  </p>
                 <div class="btn">
                     <button type="submit">Gönder</button>
                 </div>
@@ -111,20 +107,18 @@
             </div>
         </footer>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-        const form = document.querySelector("form");
-        const captchaError = document.getElementById("captcha-error");
-      
-        form.addEventListener("submit", function (e) {
-          const captchaResponse = document.querySelector(".g-recaptcha-response").value;
-      
-          if (!captchaResponse) {
-            e.preventDefault(); // Form gönderimini engelle
-            captchaError.style.display = "block"; // Uyarıyı göster
-          } else {
-            captchaError.style.display = "none"; // Uyarıyı gizle
-          }
-        });
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
       </script>
+      <script>
+        window.onload = function() {
+          document.querySelector("form").reset();
+        };
+      </script>
+      
+     
 </body>
 </html>
