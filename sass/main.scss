@@ -14,8 +14,8 @@
     }
     .p2 {
         @extend %pageWidth;
-        @include m.flexrow(2rem);
-        padding: 4rem 0;
+        @include m.flexrow(4rem);
+        padding: 4rem 3rem;
         @extend %h2p1;
         i{
             color: m.$themeColor;

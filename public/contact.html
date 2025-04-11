@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/main.css">
-    <title>Contact</title>
+    <title>Bize Ulaşın</title>
 </head>
 <body>
     <div class="container">
@@ -44,6 +44,7 @@
                 <p>İçtenliğinizle yazın. Ulaşmak bir tuş kadar yakınınızda. </p>
             </section>
             <form 
+                name ="contact" netlify
                 class="form"
                 method="POST" 
                 data-netlify-recaptcha="true"
@@ -71,6 +72,9 @@
                 <textarea name="message" rows="20" id="message" placeholder="Mesajınızı Yazınız"></textarea>
                 </div>
                 <div data-netlify-recaptcha="true"></div>
+                <p id="captcha-error" style="color: red; display: none; font-weight: bold; margin-top: 10px;">
+                    Lütfen reCAPTCHA kontrolünü tamamlayınız.
+                  </p>
                 <div class="btn">
                     <button type="submit">Gönder</button>
                 </div>
@@ -107,5 +111,20 @@
             </div>
         </footer>
     </div>
+    <script>
+        const form = document.querySelector("form");
+        const captchaError = document.getElementById("captcha-error");
+      
+        form.addEventListener("submit", function (e) {
+          const captchaResponse = document.querySelector(".g-recaptcha-response").value;
+      
+          if (!captchaResponse) {
+            e.preventDefault(); // Form gönderimini engelle
+            captchaError.style.display = "block"; // Uyarıyı göster
+          } else {
+            captchaError.style.display = "none"; // Uyarıyı gizle
+          }
+        });
+      </script>
 </body>
 </html>
