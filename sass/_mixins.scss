@@ -42,7 +42,7 @@ $logoBlack: hsl(300, 3%, 6%);
 @mixin rightNav ($bg: hsla(0, 0%, 0%, .9)) {
     position: absolute;
     left: 0;
-    top: 120%;
+    top: 118%;
     width: 100%;
     padding: .5rem 0 1rem;
     background-color: $bg;

@@ -1,9 +1,9 @@
+@use 'reset';
 @use 'mixins' as m;
 @use 'about';
 @use 'contact';
-@use 'navfooter';
 @use 'projects';
-@use 'reset';
+@use 'navfooter';
 
 .introduction {
     padding-top: 2rem;

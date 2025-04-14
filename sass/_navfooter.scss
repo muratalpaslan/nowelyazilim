@@ -54,7 +54,10 @@ body:not([class="home"]) {
         justify-content: center;
         text-align: center;
         h1 {
-            font-size: 5rem;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 8rem;
+            font-weight: 400;
             padding: 1rem;
             .typewrite {
                 display: block;
@@ -84,12 +87,28 @@ footer {
         border: 2px solid #fff;
         border-radius: 50%;
         @extend %transition;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
         &:hover {
             background-color: m.$themeColor;
         }
        }
     }
    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 999px) {
+    .page1 {
+        h1 {
+            font-size: 4rem !important;
+        }
+        a {
+            font-size: 1.4rem !important;
+            padding: .2rem .7rem !important;
+        }
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
@@ -143,5 +162,3 @@ footer {
         }
     }
 }
-
-            
