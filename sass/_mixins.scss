@@ -6,6 +6,7 @@ $lightGray: hsl(0, 0%, 88%);
 $themeColor:hsl(9, 73%, 61%);
 $logoBlue: hsl(189, 38%, 54%);
 $logoBlack: hsl(300, 3%, 6%);
+$transition: all 0.3s ease;
 
 /* Mixins */
 @mixin flexrow ($gap: 3rem) {

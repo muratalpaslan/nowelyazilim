@@ -70,15 +70,6 @@ body:not([class="home"]) {
         }        
     }
 }
-.whatsapp {
-    width: 65px;
-    height: 65px;
-    z-index: 1;
-    position: fixed;
-    // transform: translate(90vw, 90vh);
-    top: 90vh;
-    left: 93vw;
-}
 footer {
     background-color: m.$logoBlack;
     padding: 1rem 0;
@@ -109,6 +100,26 @@ footer {
    }
 }
 
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: m.$transition;
+    left: 50px;
+    @include m.flexcol(0);
+    color: m.$textColor;
+    font-size: 1.4rem ;
+}
+.whatsapp img {
+    width: 70px;
+    height: 70px;
+}
+.whatsapp.active {
+    opacity: 1;
+    visibility: visible;
+}
 @media screen and (min-width: 300px) and (max-width: 999px) {
     .page1 {
         h1 {
@@ -118,12 +129,6 @@ footer {
             font-size: 1.4rem !important;
             padding: .2rem .7rem !important;
         }
-    }
-     .whatsapp {
-        width: 65px;
-        height: 65px;
-        left: 80vw;
-        transform: translateY(-3rem);
     }
 }
 
