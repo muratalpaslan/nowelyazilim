@@ -113,12 +113,15 @@ footer {
     font-size: 1.4rem ;
 }
 .whatsapp img {
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
 }
 .whatsapp.active {
     opacity: 1;
     visibility: visible;
+}
+.whatsapp:hover {
+    transform: scale(1.1);
 }
 @media screen and (min-width: 300px) and (max-width: 999px) {
     .page1 {
