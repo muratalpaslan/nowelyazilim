@@ -12,9 +12,10 @@ $logoBlack: hsl(300, 3%, 6%);
     display: flex;
     gap: $gap;
 }
-@mixin flexcol {
+@mixin flexcol ($gap: 3rem) {
     display: flex;
     flex-direction: column;
+    gap: $gap;
 }
 @mixin title($h1: 2.6rem, $line: 2px, $p: 1.7rem) {
     h1 {

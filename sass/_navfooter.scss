@@ -119,6 +119,27 @@ footer {
             padding: .2rem .7rem !important;
         }
     }
+     .whatsapp {
+        width: 65px;
+        height: 65px;
+        left: 80vw;
+        transform: translateY(-3rem);
+    }
+}
+
+@media screen and (max-height: 670px){
+    .nav {
+        .navbar {
+            .right {
+                @include m.flexcol(5rem !important);
+            }
+        }
+        .page1 {
+                position: relative;
+                top: 10rem;
+        }
+    }
+    
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
