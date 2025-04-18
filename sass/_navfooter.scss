@@ -9,6 +9,7 @@ body:not([class="home"]) {
     border-bottom: 3px m.$themeColor solid ;
 }
 .nav {
+    z-index: 2;
     @include m.flexcol;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner.webp) no-repeat center/cover;
     height: 100vh;
@@ -21,7 +22,7 @@ body:not([class="home"]) {
         z-index: 1;
         .left {
             li {
-                width: 6rem;
+                width: 7rem;
                 height: 6rem;
             }
         }
@@ -68,6 +69,15 @@ body:not([class="home"]) {
             align-self: center;
         }        
     }
+}
+.whatsapp {
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    position: fixed;
+    // transform: translate(90vw, 90vh);
+    top: 90vh;
+    left: 93vw;
 }
 footer {
     background-color: m.$logoBlack;

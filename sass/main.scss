@@ -6,6 +6,7 @@
 @use 'navfooter';
 
 .introduction {
+    position: relative;
     padding-top: 2rem;
     .p1 {
         @extend %pageWidth;
