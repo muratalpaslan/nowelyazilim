@@ -83,11 +83,11 @@ $transition: all 0.3s ease;
 }
 %gray {
     position: absolute;
-    top: 57%;
-    height: 2rem;
+    height: 1.85em;
     background-color: $lightGray;
     opacity: 1;
     border-radius: 1px 0 0 1px;
+    transform:translateY(-21px);
 }
 %h2p1 {
     h2 {
